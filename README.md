@@ -42,4 +42,7 @@ xelatex --shell-escape <name>.tex
 大部分代码源自 https://github.com/LittleYe233/hitsz-physics-ib-reports.git
 
 ## 暂不支持首行缩进，待修复
+不修了
+
+merge.py用来合并pdf,手写的前两页和电子的后两页
 
