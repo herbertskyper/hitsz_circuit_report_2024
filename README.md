@@ -45,5 +45,6 @@ xelatex --shell-escape <name>.tex
 不修了
 
 merge.py用来合并pdf,手写的前两页和电子的后两页
+
 scanner.py用于扫描，可一定程度上消除拍摄照片角度带来的影响
 
