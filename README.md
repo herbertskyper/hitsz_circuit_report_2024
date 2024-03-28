@@ -38,6 +38,16 @@ l.18 \begin{document}
 xelatex --shell-escape <name>.tex
 ```
 
+若出现形如下面的输出则编译成功。
+```
+(d:/Program Files-Study/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(d:/Program Files-Study/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd)
+[1] [2] [3] [4] (./磁耦合共振式无线电力传输实验.aux) )
+(see the transcript file for additional information)
+Output written on 磁耦合共振式无线电力传输实验.pdf (4 pages).
+Transcript written on 磁耦合共振式无线电力传输实验.log. 
+```
+
 ## 致谢
 大部分代码源自 https://github.com/LittleYe233/hitsz-physics-ib-reports.git
 
