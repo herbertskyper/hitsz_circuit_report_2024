@@ -1,4 +1,6 @@
 # -*encoding: utf-8 *-
+
+import os
 import numpy as np
 import cv2
 from typing import List
@@ -119,13 +121,31 @@ def scan(image:np.array, gaussian_radius:int, threshold_val:float):
     return threshold
 
 
-def main(path:str='fig1.jpg', gaussian_radius:int=19, threshold_val:float=0.98):
-    transformed = transform('fig1.jpg') # TODO CHANGE THIS
+def main(path:str, save_path:str, gaussian_radius:int=19, threshold_val:float=0.98):
+    transformed = transform(path)
     scanned = scan(transformed, gaussian_radius, threshold_val)
-    cv2.imwrite('scanned.jpg', scanned)
-    cv2.imshow('scanned', scanned)
+
+    a4_size = (210, 297)
+    resized = cv2.resize(scanned, a4_size)
+
+    cv2.imwrite(save_path, resized)
+    cv2.imshow(path, scanned)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-    
+
+def auto_scan(): # a wrapper to filter all `.jpg` files in the current directory
+    current_directory = os.getcwd()
+    files_in_directory = os.listdir(current_directory)
+    jpg_files = [file for file in files_in_directory if file.endswith(".jpg")]
+    # print(jpg_files)
+    os.makedirs('output', exist_ok=True)
+    for file in jpg_files:
+        save_path  = os.path.join('output', f'out_{file}')
+        try:
+            main(file, save_path)
+            print(f'[INFO] processed {file} successfully')
+        except Exception as e:
+            print(f'[Error] processing {file}: {e}')
+
 if __name__ == '__main__':
-    main()
+    auto_scan()
