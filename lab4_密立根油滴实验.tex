@@ -1,0 +1,129 @@
+\documentclass[signature=data]{physicsreport}
+
+%%
+%% User settings
+%%
+
+\classno{}
+\stuno{}
+\groupno{}
+\stuname{}
+\expdate{\expdatefmt\today}
+\expname{电子电荷的测定——密立根油滴法}
+
+%%
+%% Document body
+%%
+
+\begin{document}
+% First page
+% Some titles and personal information are defined in ``\maketitle''.
+\maketitle
+
+\section{实验预习}
+
+
+% Teacher signature
+\makeatletter
+\physicsreport@body@signature{preparation}
+\makeatother
+
+
+% Original experiment data
+\section{实验现象及原始数据记录}
+
+
+% Teacher signature
+\makeatletter
+\physicsreport@body@signature{data}
+\makeatother
+
+\newpage
+% Data process and others
+\section{数据处理}
+
+    （静态法、动态法分别至少测量$3$颗油滴，计算每颗油滴的电荷量$q_i$，计算$\frac{q_i}{e}$，对商四舍五入取整后得到每颗油滴所带电子个数$n_i$；再得到每次测量的基本电荷$e_i$，再求出$n$次测量的，与理论值比较求百分误差。要有详细的计算过程，格式工整）
+    
+    实验中所用的有关参考数据：
+    
+油滴密度：$\rho=981 kg·m^{-3}$
+
+重力加速度：$g=9.78 m·s^{-2}$
+
+空气粘度系数：$\eta=1.83×10^{-5}·kg·m^{-1}·s^{-1}$
+
+油滴匀速下降距离：$l=1.60×10^{-3}m$
+
+修正常数：$b=8.22×10^{-3}m·Pa$
+
+大气压强（深圳）：$P=1.0098×10^{5} Pa$
+
+平行极板距离：	$d=5.00×10^{-3}m$
+
+\vspace{2em}
+静态法：
+
+运用以下公式计算
+$$
+\begin{array}{c}q_{i}=\frac{18 \pi}{\sqrt{2 g \rho}} \frac{d}{U_{n}}\left[\frac{\eta l}{t_{i}\left(1+\frac{b}{p} \sqrt{\frac{2 g \rho t_{i}}{9 \eta l}}\right)}\right]^{\frac{3}{2}} \\n_{i}=\frac{q_{i}}{e} \\e_{i}=\frac{q_{i}}{n_{i}^{*}} \\\bar{e}=\frac{\sum_{i=1}^{6} e_{i}}{6} \\\sigma=\frac{|\bar{e}-e|}{e}\end{array}
+$$
+
+代入公式得
+
+$$
+\begin{array}{c}
+\overline{e_1}=1.5685×10^{-19},\sigma_1=-2.10\% \\
+\overline{e_2}=1.5482×10^{-19},\sigma_2=-3.37\% \\
+\overline{e_3}=1.6129×10^{-19},\sigma_3=+0.67\% \\
+\end{array}
+$$
+
+动态法：
+
+运用以下公式计算
+
+$$
+\begin{array}{c}
+q_{i}=\frac{18 \pi}{\sqrt{2 g \rho}} \frac{d}{U_{n}}\left(1+\frac{t_{1_{i}}}{t_{2_{i}}}\right)\left[\frac{\eta l}{t_{1_{i}}\left(1+\frac{b}{p} \sqrt{\frac{2 g \rho t_{1_{i}}}{9 \eta l}}\right)}\right]^{\frac{3}{2}} \\ 
+n_{i}=\frac{q_{i}}{e} \\
+e_{i}=\frac{q_{i}}{n_{i}^{*}} \\
+\bar{e}=\frac{\sum_{i=1}^{6} e_{i}}{6} \\
+\sigma=\frac{|\bar{e}-e|}{e}
+\end{array}
+$$
+
+代入公式得
+
+$$
+\begin{array}{c}
+\overline{e_1}=1.5655×10^{-19},\sigma_1=-2.29\% \\
+\overline{e_2}=1.5792×10^{-19},\sigma_2=-1.44\% \\
+\overline{e_3}=1.6036×10^{-19},\sigma_3=+0.09\% \\
+\end{array}
+$$
+
+\section{实验结论及现象分析}
+    （分析讨论本实验中出现的实验现象和电子电荷测量误差产生的原因，如何减少该误差？）
+
+    本实验通过观察油滴的运动并记录相关运动的时间，电压等来进行元电荷的估计。实验过程中油
+滴可能变得模糊，而且可能不会一直在同一竖直平面运动，在观察油滴是否恰当的过程中应着重观察油滴是否会在短时间内变得模糊，是否竖直运动来减少误差。同时，选中油滴后应该尽快完成针对该油滴的实验，因为油滴会挥发。另外，时间的测量误差也很大。计时与停止计时的时间点难以精确控制。为了增大时间测量的准确性，考虑将油滴的运动情况摄影并通过计算机编程的方法自动计算时间。
+    \vspace{10em}
+\section{讨论题}
+\begin{enumerate}
+    \item 当跟踪观察某一油滴时，原来清晰的像变模糊了，可能是什么原因造成的？
+
+   因为油滴此时不在CCD的焦平面上，导致了失焦。脱离焦平面的原因主要有三种：
+\begin{itemize}
+    \item 仪器未调平：如果仪器没有水平调节好，油滴在运动过程中会逐渐偏离焦平面。
+    \item  油滴水平速度过小：喷入的油滴如果速度很小，也会脱离焦平面。
+    \item 布朗运动：小油滴的布朗运动也可能导致其脱离焦平面。
+\end{itemize}
+
+
+    \item 由于油的挥发，油滴的质量会不断下降。当长时间跟踪测量同一个油滴时，由于油滴的挥发，会使哪些测量量发生变化。
+    
+\hspace{2em}
+    随着油滴的挥发，其大小会发生变化，从而影响受到的空气阻力。这进一步导致截止速度的变化，从而影响测量到的时间。此外，油滴的质量也会发生变化，施加于其上以平衡重力的电场强度也会变化。因此，平衡电压也会随之变化。如果长时间跟踪同一个油滴，实验中所有直接测量的量相对于初始状态的理论值都会发生变化。
+\end{enumerate}
+
+\end{document}
