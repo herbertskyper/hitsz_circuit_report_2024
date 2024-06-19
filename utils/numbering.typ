@@ -11,7 +11,7 @@
       #h(0cm)
     ] 
     else if without_first.len() == 1 [
-      #numbering( "一、" , ..nums_vec.slice(1,2))
+      #numbering( "1." , ..nums_vec.slice(1,2))
     ]
     else {
       numbering("1.1", ..without_first)
