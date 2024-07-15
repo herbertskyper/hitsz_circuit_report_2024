@@ -6,12 +6,7 @@
 }
 #set heading(numbering: heading_numbering)
 == 
-Multisim；
-
-
-
-
-
+Multisim
 
 一、创建电路
 
@@ -62,7 +57,7 @@ Multisim；
 用一个电流源并联电导等效二端网络，只是多了一步电压源与电流源的等效变换而已。
 
 ==
-#image("image/pdf1.jpg",width: 100%)
+//#image("image/pdf1.jpg",width: 100%)
 #image("image/output.png",width: 50%)
 #for c in "12345678" [
     #let name = "image/"+c+".png"
